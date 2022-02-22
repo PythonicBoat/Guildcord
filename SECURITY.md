@@ -2,12 +2,10 @@
 
 ## Supported Versions
 
-Guildcord versions
-
 | Version | Supported          | Type
 | ------- | ------------------ |-----------
-|   0.1   | :white_check_mark: | Alpha
-| < 1.0   | :x:                | Upcoming
+|   0.1   | :white_check_mark: | Beta
+|   1.0   | :x:                | Alpha 
 
 ## Reporting a Vulnerability
 
