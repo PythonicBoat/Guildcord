@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Guildcord
+{% endblock %}
+
+{% block main %}
+    <!-- <link rel="stylesheet" href="/static/styles.css"> -->
+    <style>
+        @font-face {
+            font-family: 'whitneybold';
+            src: url('/static/whitney-bold-webfont.woff2') format('woff2'),
+                url('/static/whitney-bold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: "whitneybold";
+            background-color: #063abf;
+        }
+
+        #title {
+            text-align: center;
+            margin-top: 200px;
+            color: white;
+        }
+        button {
+            width: 280px; height: 60px; color: white; background-color: #23272a; border-radius: 20px; border: 1px solid #23272a; outline: none; margin-left: 200px;
+        }
+
+        button:hover {
+            background-color: rgba(35, 39, 42, 0.9 );
+            box-shadow: 0 0 5px rgb(71, 75, 77);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        p {
+            font-size: 20px; margin-left: 280px; margin-right: 280px;
+        }
+
+        #img1 {
+            position: absolute;
+            margin-top: -300px;
+            margin-left: -1300px;
+        }
+
+        #img2 {
+            position: absolute;
+            margin-top: -300px;
+            margin-left: 800px;
+        }
+    </style>
+    <div id="title">
+        <h1>Your place to talk</h1> <br>
+        <p>Whether you are part of a school club, gaming group, worldwide art community, or just a handful of friends that want to spend time together, Guildcord makes it easy to talk every day and hang out more often.</p>
+        <br> <br> <br>
+        <img src="" id="img1">
+        <img src="" id="img2">
+        {% if not session["user_id"] %}
+            <button type="button" id="button" onclick="window.location.replace('/login')">Login to Guildcord</button>
+        {% else %}
+            <button type="button" id="button" onclick="window.location.replace('/@me')">Open guildcord in Browser</button>
+        {% endif %}
+    </div>
+{% endblock %}
